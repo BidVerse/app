@@ -1,3 +1,4 @@
+import 'package:app/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'pages/login.dart';
 import 'global/app_theme.dart';
@@ -10,11 +11,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'AngelHacks Submission',
       theme: ThemeData(
         primaryColor: AppTheme.primary,
       ),
-      home: LoginPage(),
+      // builder: (c, w) => Provider(
+      //   create: (c) => Session(),
+      //   builder: (c, w) => w,
+      //   child: w,
+      // ),
+      initialRoute: '/login',
+      routes: {
+        '/home': (context) => HomePage(),
+        '/login': (context) => LoginPage(),
+      },
     );
   }
 }
