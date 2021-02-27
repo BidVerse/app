@@ -23,7 +23,9 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               child: SizedBox(
                   width: double.infinity,
-                  child: Button('Login', onPressed: () {})),
+                  child: Button('Login', onPressed: () {
+                    Navigator.pushNamed(context, '/home');
+                  })),
             )
           ],
           crossAxisAlignment: CrossAxisAlignment.center,
