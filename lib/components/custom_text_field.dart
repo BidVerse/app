@@ -25,7 +25,7 @@ class CustomTextField extends StatelessWidget {
           onSubmitted: onSubmit,
           onChanged: onChanged,
           decoration: InputDecoration(
-            labelText: labelText,
+            hintText: labelText,
             border: InputBorder.none,
             fillColor: Colors.grey[300],
             filled: true,
