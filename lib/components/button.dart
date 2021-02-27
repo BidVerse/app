@@ -40,9 +40,9 @@ class Button extends StatelessWidget {
   Color get backgroundColor {
     switch (style) {
       case Style.Primary:
-        return Colors.black;
-      case Style.Secondary:
         return AppTheme.primary;
+      case Style.Secondary:
+        return AppTheme.secondary;
       default:
         return AppTheme.primary;
     }

@@ -8,24 +8,27 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
         body: SizedBox(
       width: double.infinity,
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(32.0),
-            child: Image.asset('assets/logo.png',
-                width: MediaQuery.of(context).size.width / 2),
-          ),
-          CustomTextField(labelText: 'Username'),
-          CustomTextField(labelText: 'Password'),
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: SizedBox(
-                width: double.infinity,
-                child: Button('Login', onPressed: () {})),
-          )
-        ],
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: Image.asset('assets/logo.png',
+                  width: MediaQuery.of(context).size.width / 2),
+            ),
+            CustomTextField(labelText: 'Username'),
+            CustomTextField(labelText: 'Password'),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              child: SizedBox(
+                  width: double.infinity,
+                  child: Button('Login', onPressed: () {})),
+            )
+          ],
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
       ),
     ));
   }
