@@ -113,8 +113,9 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
                                 widget.profile.bids.length,
                                 (i) => SpacedRow(
                                     ThemedText(widget.profile.bids[i].name),
-                                    ThemedText(widget.profile.bids[i].amount
-                                        .toString()))))
+                                    ThemedText('\$' +
+                                        widget.profile.bids[i].amount
+                                            .toString()))))
                       ],
                     )),
               ),
