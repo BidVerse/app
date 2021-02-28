@@ -10,15 +10,15 @@ class HomePage extends StatelessWidget {
         tabBar: CupertinoTabBar(items: [
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.home),
-            label: '',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search),
-            label: '',
+            icon: Icon(CupertinoIcons.money_dollar),
+            label: 'Buyer Profile',
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.person),
-            label: '',
+            label: 'Seller Profile',
           )
         ]),
         tabBuilder: (context, index) {

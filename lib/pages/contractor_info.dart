@@ -1,8 +1,9 @@
+import 'package:app/components/themed_text.dart';
 import 'package:flutter/material.dart';
 
 class ContractorInfoPage extends StatelessWidget {
-  final int index;
-  ContractorInfoPage(this.index);
+  final String id;
+  ContractorInfoPage(this.id);
 
   @override
   Widget build(BuildContext context) {
@@ -10,12 +11,17 @@ class ContractorInfoPage extends StatelessWidget {
         body: Stack(
       children: [
         Hero(
-          tag: index,
+          tag: id,
           child: Image.asset('assets/nooblow.png',
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover),
         ),
+        Positioned(
+            bottom: 0,
+            child: Container(
+                color: Colors.white,
+                child: ThemedText('hey look here\'s some fancy text')))
       ],
     ));
   }

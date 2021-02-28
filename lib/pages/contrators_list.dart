@@ -1,17 +1,37 @@
 import 'package:app/components/header.dart';
+import 'package:app/components/profile_tile.dart';
 import 'package:app/components/themed_text.dart';
 import 'package:app/global/app_theme.dart';
+import 'package:app/models/profiles.dart';
 import 'package:app/pages/contractor_info.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ContractorListPage extends StatelessWidget {
-  final List<String> list = [
-    'Flutter Development',
-    'Logo Design',
-    'Parametric Logo Design',
-    'React Development',
-    'Project Management'
+  final List<Profile> list = [
+    new Profile(
+        contract: 'Mobile App Development',
+        name: 'Jacob Zwang',
+        image: 'assets/nooblow.png',
+        id: '1'),
+    new Profile(
+      contract: 'Modern Logo Design',
+      name: 'Ben Swerdlow',
+      image: 'assets/logo.png',
+      id: '2',
+    ),
+    new Profile(
+      contract: 'Project/Pipeline Management',
+      name: 'Jason Telanoff',
+      image: 'assets/logo.png',
+      id: '3',
+    ),
+    new Profile(
+      contract: 'JavaScript Framework Development',
+      name: 'Ethan Hopkins',
+      image: 'assets/logo.png',
+      id: '4',
+    ),
   ];
 
   @override
@@ -24,51 +44,9 @@ class ContractorListPage extends StatelessWidget {
               padding: const EdgeInsets.only(right: 12),
               child: CupertinoSearchTextField(),
             ),
-            middle: ThemedText('List', type: Type.h1)),
+            middle: ThemedText('BidVerse', type: Type.h1)),
         SliverList(
-            delegate: SliverChildBuilderDelegate(
-                (c, i) => Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (c) {
-                              return ContractorInfoPage(i);
-                            }));
-                          },
-                          style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                              backgroundColor: AppTheme.backgroundLightGray),
-                          child: Column(
-                            children: [
-                              Hero(
-                                tag: i,
-                                child: Image.asset('assets/nooblow.png',
-                                    height: 250, width: 400, fit: BoxFit.cover),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: 10, horizontal: 15),
-                                child: SizedBox(
-                                  width: double.infinity,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      ThemedText(list[i], type: Type.h2),
-                                      ThemedText('Ben Swerdlow',
-                                          type: Type.subtitle)
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+            delegate: SliverChildBuilderDelegate((c, i) => ProfileTile(list[i]),
                 childCount: list.length))
       ]),
     );
