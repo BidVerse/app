@@ -18,7 +18,7 @@ class _ContractorListPageState extends State<ContractorListPage> {
     new Profile(
         contract: 'Mobile App Development',
         name: 'Jacob Zwang',
-        image: 'assets/nooblow.png',
+        image: 'assets/app dev.jpeg',
         id: '1',
         description:
             'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
@@ -40,7 +40,7 @@ class _ContractorListPageState extends State<ContractorListPage> {
     new Profile(
         contract: 'Modern Logo Design - Illustrator',
         name: 'Ben Swerdlow',
-        image: 'assets/logo.png',
+        image: 'assets/cofu.png',
         id: '2',
         description:
             'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
@@ -52,7 +52,7 @@ class _ContractorListPageState extends State<ContractorListPage> {
     new Profile(
         contract: 'Project/Pipeline Management',
         name: 'Jason Telanoff',
-        image: 'assets/logo.png',
+        image: 'assets/project management.jpg',
         id: '3',
         description:
             'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
@@ -64,7 +64,7 @@ class _ContractorListPageState extends State<ContractorListPage> {
     new Profile(
         contract: 'Perl Development',
         name: 'Ethan Hopkins',
-        image: 'assets/logo.png',
+        image: 'assets/perldev.png',
         id: '4',
         description:
             'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
