@@ -41,7 +41,9 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25)),
                 child: Container(
                     height: MediaQuery.of(context).size.height * 0.7,
                     color: Colors.white,
@@ -74,7 +76,7 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
                                 ),
                               ),
                               SizedBox(
-                                height: 60,
+                                height: 80,
                                 width: MediaQuery.of(context).size.width - 164,
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 8.0),
@@ -88,9 +90,12 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
                                         widget.profile.name,
                                         textAlign: TextAlign.left,
                                       ),
-                                      Text(widget.profile.bio,
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(fontSize: 12))
+                                      Text(
+                                        widget.profile.bio,
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(fontSize: 12),
+                                        overflow: TextOverflow.clip,
+                                      )
                                     ],
                                   ),
                                 ),

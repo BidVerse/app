@@ -8,7 +8,12 @@ import 'package:app/pages/contractor_info.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ContractorListPage extends StatelessWidget {
+class ContractorListPage extends StatefulWidget {
+  @override
+  _ContractorListPageState createState() => _ContractorListPageState();
+}
+
+class _ContractorListPageState extends State<ContractorListPage> {
   final List<Profile> list = [
     new Profile(
         contract: 'Mobile App Development',
@@ -20,6 +25,16 @@ class ContractorListPage extends StatelessWidget {
         bio:
             'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat.',
         bids: [
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
+          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
         ]),
     new Profile(
@@ -59,22 +74,44 @@ class ContractorListPage extends StatelessWidget {
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
         ]),
   ];
+  List<Profile> listShow;
+
+  @override
+  void initState() {
+    listShow = list;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(slivers: [
-        CupertinoSliverNavigationBar(
-            automaticallyImplyLeading: false,
-            largeTitle: Padding(
-              padding: const EdgeInsets.only(right: 12),
-              child: CupertinoSearchTextField(),
-            ),
-            middle: ThemedText('BidVerse', type: Type.h1)),
-        SliverList(
-            delegate: SliverChildBuilderDelegate((c, i) => ProfileTile(list[i]),
-                childCount: list.length))
-      ]),
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 50),
+        child: CustomScrollView(slivers: [
+          CupertinoSliverNavigationBar(
+              automaticallyImplyLeading: false,
+              largeTitle: Padding(
+                padding: const EdgeInsets.only(right: 12),
+                child: CupertinoSearchTextField(
+                  onChanged: (v) => search(v.toLowerCase()),
+                ),
+              ),
+              middle: ThemedText('BidVerse', type: Type.h1)),
+          SliverList(
+              delegate: SliverChildBuilderDelegate(
+                  (c, i) => ProfileTile(listShow[i]),
+                  childCount: listShow.length)),
+        ]),
+      ),
     );
+  }
+
+  void search(String str) {
+    listShow = [];
+    list.forEach((p) {
+      if (p.name.toLowerCase().contains(str) ||
+          p.contract.toLowerCase().contains(str)) listShow.add(p);
+    });
+    setState(() => listShow = listShow);
   }
 }
