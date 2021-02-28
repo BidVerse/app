@@ -18,7 +18,7 @@ class ProfileTile extends StatelessWidget {
         child: TextButton(
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (c) {
-              return ContractorInfoPage(profile.id);
+              return ContractorInfoPage(profile);
             }));
           },
           style: TextButton.styleFrom(

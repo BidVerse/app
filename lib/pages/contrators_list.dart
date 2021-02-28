@@ -10,27 +10,44 @@ import 'package:flutter/material.dart';
 class ContractorListPage extends StatelessWidget {
   final List<Profile> list = [
     new Profile(
-        contract: 'Mobile App Development',
-        name: 'Jacob Zwang',
-        image: 'assets/nooblow.png',
-        id: '1'),
+      contract: 'Mobile App Development',
+      name: 'Jacob Zwang',
+      image: 'assets/nooblow.png',
+      id: '1',
+      description:
+          'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
+      bio:
+          'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat. Officia deserunt incididunt sit esse labore est id ex. Eu excepteur excepteur non duis veniam et. In minim dolor enim in ad reprehenderit ad irure sit eu sint id ex adipisicing. ',
+    ),
     new Profile(
       contract: 'Modern Logo Design - Illustrator',
       name: 'Ben Swerdlow',
       image: 'assets/logo.png',
       id: '2',
+      description:
+          'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
+      bio:
+          'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat. Officia deserunt incididunt sit esse labore est id ex. Eu excepteur excepteur non duis veniam et. In minim dolor enim in ad reprehenderit ad irure sit eu sint id ex adipisicing. ',
     ),
     new Profile(
       contract: 'Project/Pipeline Management',
       name: 'Jason Telanoff',
       image: 'assets/logo.png',
       id: '3',
+      description:
+          'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
+      bio:
+          'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat. Officia deserunt incididunt sit esse labore est id ex. Eu excepteur excepteur non duis veniam et. In minim dolor enim in ad reprehenderit ad irure sit eu sint id ex adipisicing. ',
     ),
     new Profile(
       contract: 'Perl Development',
       name: 'Ethan Hopkins',
       image: 'assets/logo.png',
       id: '4',
+      description:
+          'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
+      bio:
+          'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat. Officia deserunt incididunt sit esse labore est id ex. Eu excepteur excepteur non duis veniam et. In minim dolor enim in ad reprehenderit ad irure sit eu sint id ex adipisicing. ',
     ),
   ];
 

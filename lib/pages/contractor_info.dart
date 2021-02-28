@@ -1,9 +1,10 @@
 import 'package:app/components/themed_text.dart';
+import 'package:app/models/profiles.dart';
 import 'package:flutter/material.dart';
 
 class ContractorInfoPage extends StatefulWidget {
-  final String id;
-  ContractorInfoPage(this.id);
+  final Profile profile;
+  ContractorInfoPage(this.profile);
 
   @override
   _ContractorInfoPageState createState() => _ContractorInfoPageState();
@@ -25,8 +26,8 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
         body: Stack(
       children: [
         Hero(
-          tag: widget.id,
-          child: Image.asset('assets/nooblow.png',
+          tag: widget.profile.id,
+          child: Image.asset(widget.profile.image,
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover),
@@ -43,7 +44,15 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
                 child: Container(
                     height: MediaQuery.of(context).size.height * 0.7,
                     color: Colors.white,
-                    child: ThemedText('hey look here\'s some fancy text')),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 25),
+                          child: ThemedText(widget.profile.contract,
+                              type: Type.h2),
+                        ),
+                      ],
+                    )),
               ),
             ))
       ],
