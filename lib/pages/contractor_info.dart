@@ -18,10 +18,18 @@ class ContractorInfoPage extends StatelessWidget {
               fit: BoxFit.cover),
         ),
         Positioned(
+            width: MediaQuery.of(context).size.width,
             bottom: 0,
-            child: Container(
-                color: Colors.white,
-                child: ThemedText('hey look here\'s some fancy text')))
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(25),
+                child: Container(
+                    height: MediaQuery.of(context).size.height * 0.7,
+                    color: Colors.white,
+                    child: ThemedText('hey look here\'s some fancy text')),
+              ),
+            ))
       ],
     ));
   }

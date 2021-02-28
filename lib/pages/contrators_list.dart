@@ -15,7 +15,7 @@ class ContractorListPage extends StatelessWidget {
         image: 'assets/nooblow.png',
         id: '1'),
     new Profile(
-      contract: 'Modern Logo Design',
+      contract: 'Modern Logo Design - Illustrator',
       name: 'Ben Swerdlow',
       image: 'assets/logo.png',
       id: '2',
@@ -27,7 +27,7 @@ class ContractorListPage extends StatelessWidget {
       id: '3',
     ),
     new Profile(
-      contract: 'JavaScript Framework Development',
+      contract: 'Perl Development',
       name: 'Ethan Hopkins',
       image: 'assets/logo.png',
       id: '4',
