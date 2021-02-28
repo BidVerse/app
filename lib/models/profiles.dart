@@ -2,7 +2,7 @@ import 'package:app/models/bid.dart';
 import 'package:flutter/foundation.dart';
 
 class Profile {
-  final String contract, name, image, id, description, bio;
+  final String contract, name, image, id, description, bio, profilePic;
   final List<Bid> bids;
 
   Profile(
@@ -12,5 +12,6 @@ class Profile {
       @required this.id,
       @required this.description,
       @required this.bio,
-      @required this.bids});
+      @required this.bids,
+      @required this.profilePic});
 }

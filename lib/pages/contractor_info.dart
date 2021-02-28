@@ -69,7 +69,7 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
                             children: [
                               ClipOval(
                                 child: Image.asset(
-                                  widget.profile.image,
+                                  widget.profile.profilePic,
                                   height: 80,
                                   width: 80,
                                   fit: BoxFit.cover,
