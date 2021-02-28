@@ -1,9 +1,23 @@
 import 'package:app/components/themed_text.dart';
 import 'package:flutter/material.dart';
 
-class ContractorInfoPage extends StatelessWidget {
+class ContractorInfoPage extends StatefulWidget {
   final String id;
   ContractorInfoPage(this.id);
+
+  @override
+  _ContractorInfoPageState createState() => _ContractorInfoPageState();
+}
+
+class _ContractorInfoPageState extends State<ContractorInfoPage> {
+  double bottom;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    bottom = -1000;
+    comeup();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -11,15 +25,17 @@ class ContractorInfoPage extends StatelessWidget {
         body: Stack(
       children: [
         Hero(
-          tag: id,
+          tag: widget.id,
           child: Image.asset('assets/nooblow.png',
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover),
         ),
-        Positioned(
+        AppBar(backgroundColor: Colors.transparent),
+        AnimatedPositioned(
             width: MediaQuery.of(context).size.width,
-            bottom: 0,
+            bottom: bottom,
+            duration: Duration(milliseconds: 300),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: ClipRRect(
@@ -32,5 +48,12 @@ class ContractorInfoPage extends StatelessWidget {
             ))
       ],
     ));
+  }
+
+  void comeup() async {
+    await Future.delayed(Duration(milliseconds: 100));
+    setState(() {
+      bottom = 0;
+    });
   }
 }
