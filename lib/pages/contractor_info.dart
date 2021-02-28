@@ -120,15 +120,15 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
               ),
             )),
         Positioned(
-          bottom: 0,
+          bottom: 30,
           width: MediaQuery.of(context).size.width,
           child: Padding(
-            padding: const EdgeInsets.only(left: 10, right: 22),
+            padding: const EdgeInsets.only(left: 16, right: 28),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  width: MediaQuery.of(context).size.width - 100,
+                  width: MediaQuery.of(context).size.width - 112,
                   child: CustomTextField(
                     labelText: 'Bid amount',
                     onChanged: (v) => amount = double.parse(v),
