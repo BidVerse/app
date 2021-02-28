@@ -1,5 +1,8 @@
+import 'package:app/components/button.dart';
+import 'package:app/components/custom_text_field.dart';
 import 'package:app/components/spaced_row.dart';
 import 'package:app/components/themed_text.dart';
+import 'package:app/models/bid.dart';
 import 'package:app/models/profiles.dart';
 import 'package:flutter/material.dart';
 
@@ -12,12 +15,13 @@ class ContractorInfoPage extends StatefulWidget {
 }
 
 class _ContractorInfoPageState extends State<ContractorInfoPage> {
-  double bottom;
+  double bottom, amount;
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     bottom = -1000;
+    amount = 0;
     comeup();
   }
 
@@ -48,7 +52,7 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
                     height: MediaQuery.of(context).size.height * 0.7,
                     color: Colors.white,
                     child: ListView(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.only(top: 20, bottom: 100),
                       shrinkWrap: true,
                       children: [
                         ThemedText(widget.profile.contract, type: Type.h2),
@@ -114,7 +118,33 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
                       ],
                     )),
               ),
-            ))
+            )),
+        Positioned(
+          bottom: 0,
+          width: MediaQuery.of(context).size.width,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10, right: 22),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width - 100,
+                  child: CustomTextField(
+                    labelText: 'Bid amount',
+                    onChanged: (v) => amount = double.parse(v),
+                  ),
+                ),
+                Button(
+                  'Bid',
+                  onPressed: () {
+                    setState(() => widget.profile.bids
+                        .add(new Bid(amount: amount, name: 'Jason Telanoff')));
+                  },
+                ),
+              ],
+            ),
+          ),
+        )
       ],
     ));
   }
