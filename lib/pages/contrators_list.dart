@@ -35,7 +35,7 @@ class ContractorListPage extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (c) {
-                              return ContractorInfoPage();
+                              return ContractorInfoPage(i);
                             }));
                           },
                           style: TextButton.styleFrom(
@@ -43,8 +43,11 @@ class ContractorListPage extends StatelessWidget {
                               backgroundColor: AppTheme.backgroundLightGray),
                           child: Column(
                             children: [
-                              Image.asset('assets/nooblow.png',
-                                  height: 250, width: 400, fit: BoxFit.cover),
+                              Hero(
+                                tag: i,
+                                child: Image.asset('assets/nooblow.png',
+                                    height: 250, width: 400, fit: BoxFit.cover),
+                              ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 15),
