@@ -25,6 +25,7 @@ class _ContractorListPageState extends State<ContractorListPage> {
         bio:
             'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat.',
         bids: [
+          new Bid(amount: 100, name: 'Benjamin Swerdlow (HIRING)'),
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
@@ -35,8 +36,8 @@ class _ContractorListPageState extends State<ContractorListPage> {
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
-          new Bid(amount: 100, name: 'Benjamin Swerdlow'),
-        ]),
+        ],
+        profilePic: 'assets/Jacob.png'),
     new Profile(
         contract: 'Modern Logo Design - Illustrator',
         name: 'Ben Swerdlow',
@@ -48,7 +49,8 @@ class _ContractorListPageState extends State<ContractorListPage> {
             'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat.',
         bids: [
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
-        ]),
+        ],
+        profilePic: 'assets/Ben.png'),
     new Profile(
         contract: 'Project/Pipeline Management',
         name: 'Jason Telanoff',
@@ -60,7 +62,8 @@ class _ContractorListPageState extends State<ContractorListPage> {
             'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat.',
         bids: [
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
-        ]),
+        ],
+        profilePic: 'assets/Jason.png'),
     new Profile(
         contract: 'Perl Development',
         name: 'Ethan Hopkins',
@@ -72,7 +75,8 @@ class _ContractorListPageState extends State<ContractorListPage> {
             'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat.',
         bids: [
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
-        ]),
+        ],
+        profilePic: 'assets/Ethan.png'),
   ];
   List<Profile> listShow;
 
