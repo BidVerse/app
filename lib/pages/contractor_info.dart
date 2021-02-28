@@ -1,3 +1,4 @@
+import 'package:app/components/spaced_row.dart';
 import 'package:app/components/themed_text.dart';
 import 'package:app/models/profiles.dart';
 import 'package:flutter/material.dart';
@@ -44,13 +45,21 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
                 child: Container(
                     height: MediaQuery.of(context).size.height * 0.7,
                     color: Colors.white,
-                    child: Column(
+                    child: ListView(
+                      shrinkWrap: true,
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 25),
                           child: ThemedText(widget.profile.contract,
                               type: Type.h2),
                         ),
+                        Column(
+                            children: List.generate(
+                                widget.profile.bids.length,
+                                (i) => SpacedRow(
+                                    ThemedText(widget.profile.bids[i].name),
+                                    ThemedText(widget.profile.bids[i].amount
+                                        .toString()))))
                       ],
                     )),
               ),
