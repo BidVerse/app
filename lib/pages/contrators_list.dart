@@ -14,39 +14,41 @@ class ContractorListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(slivers: [
-      Header('List'),
-      SliverList(
-          delegate:
-              SliverChildBuilderDelegate((c, i) => Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Container(
-                color: AppTheme.backgroundLightGray,
-                child: Column(
-                  children: [
-                    Image.asset('assets/nooblow.png',
-                        height: 250, width: 400, fit: BoxFit.cover),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 15),
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ThemedText(list[i], type: Type.h2),
-                            ThemedText('Ben Swerdlow', type: Type.subtitle)
-                          ],
+    return Scaffold(
+      body: CustomScrollView(slivers: [
+        Header('List'),
+        SliverList(
+            delegate:
+                SliverChildBuilderDelegate((c, i) => Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  color: AppTheme.backgroundLightGray,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/nooblow.png',
+                          height: 250, width: 400, fit: BoxFit.cover),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 15),
+                        child: SizedBox(
+                          width: double.infinity,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ThemedText(list[i], type: Type.h2),
+                              ThemedText('Ben Swerdlow', type: Type.subtitle)
+                            ],
+                          ),
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-          );, childCount: list.length))
-    ]);
+            );, childCount: list.length))
+      ]),
+    );
   }
 }
