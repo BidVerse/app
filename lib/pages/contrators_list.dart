@@ -1,6 +1,7 @@
 import 'package:app/components/header.dart';
 import 'package:app/components/themed_text.dart';
 import 'package:app/global/app_theme.dart';
+import 'package:app/pages/contractor_info.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -30,8 +31,16 @@ class ContractorListPage extends StatelessWidget {
                       padding: const EdgeInsets.all(12.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          color: AppTheme.backgroundLightGray,
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (c) {
+                              return ContractorInfoPage();
+                            }));
+                          },
+                          style: TextButton.styleFrom(
+                              padding: EdgeInsets.zero,
+                              backgroundColor: AppTheme.backgroundLightGray),
                           child: Column(
                             children: [
                               Image.asset('assets/nooblow.png',
