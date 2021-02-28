@@ -7,10 +7,9 @@ class HomePage extends StatelessWidget {
   final List<String> list = [
     'Flutter Development',
     'Logo Design',
-    'ho',
-    'hum',
-    'phi',
-    'fi'
+    'Parametric Logo Design',
+    'React Development',
+    'Project Management'
   ];
 
   @override
