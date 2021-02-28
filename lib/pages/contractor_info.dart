@@ -46,13 +46,59 @@ class _ContractorInfoPageState extends State<ContractorInfoPage> {
                     height: MediaQuery.of(context).size.height * 0.7,
                     color: Colors.white,
                     child: ListView(
+                      padding: EdgeInsets.only(top: 20),
                       shrinkWrap: true,
                       children: [
+                        ThemedText(widget.profile.contract, type: Type.h2),
+                        Divider(),
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 25),
-                          child: ThemedText(widget.profile.contract,
-                              type: Type.h2),
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: ThemedText(
+                            widget.profile.description,
+                            type: Type.subtitle,
+                            textAlign: TextAlign.left,
+                          ),
                         ),
+                        Divider(),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 8.0, horizontal: 16.0),
+                          child: Row(
+                            children: [
+                              ClipOval(
+                                child: Image.asset(
+                                  widget.profile.image,
+                                  height: 80,
+                                  width: 80,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 60,
+                                width: MediaQuery.of(context).size.width - 164,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 8.0),
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      ThemedText(
+                                        widget.profile.name,
+                                        textAlign: TextAlign.left,
+                                      ),
+                                      Text(widget.profile.bio,
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(fontSize: 12))
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Divider(),
                         Column(
                             children: List.generate(
                                 widget.profile.bids.length,

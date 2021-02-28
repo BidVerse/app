@@ -18,7 +18,7 @@ class ContractorListPage extends StatelessWidget {
         description:
             'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
         bio:
-            'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat. Officia deserunt incididunt sit esse labore est id ex. Eu excepteur excepteur non duis veniam et. In minim dolor enim in ad reprehenderit ad irure sit eu sint id ex adipisicing. ',
+            'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat.',
         bids: [
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
         ]),
@@ -30,7 +30,7 @@ class ContractorListPage extends StatelessWidget {
         description:
             'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
         bio:
-            'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat. Officia deserunt incididunt sit esse labore est id ex. Eu excepteur excepteur non duis veniam et. In minim dolor enim in ad reprehenderit ad irure sit eu sint id ex adipisicing. ',
+            'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat.',
         bids: [
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
         ]),
@@ -42,7 +42,7 @@ class ContractorListPage extends StatelessWidget {
         description:
             'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
         bio:
-            'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat. Officia deserunt incididunt sit esse labore est id ex. Eu excepteur excepteur non duis veniam et. In minim dolor enim in ad reprehenderit ad irure sit eu sint id ex adipisicing. ',
+            'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat.',
         bids: [
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
         ]),
@@ -54,7 +54,7 @@ class ContractorListPage extends StatelessWidget {
         description:
             'Nulla do cupidatat non duis officia sit esse sit qui duis voluptate cupidatat ex magna. Proident aute proident minim quis ipsum duis ex nisi. Ea proident cupidatat duis consequat ullamco cupidatat in dolor quis id veniam reprehenderit duis. Proident elit culpa dolor enim esse et do non irure ad nisi velit excepteur. Non culpa mollit consectetur aliquip duis nostrud qui est magna id.',
         bio:
-            'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat. Officia deserunt incididunt sit esse labore est id ex. Eu excepteur excepteur non duis veniam et. In minim dolor enim in ad reprehenderit ad irure sit eu sint id ex adipisicing. ',
+            'Tempor sint proident mollit enim incididunt ex. Aliquip duis in ullamco eu consequat.',
         bids: [
           new Bid(amount: 100, name: 'Benjamin Swerdlow'),
         ]),
